@@ -13,20 +13,3 @@ allprojects {
         jcenter()
     }
 }
-
-
-apply plugin: 'maven'
-
-version = '0.1.0'
-group = 'com.sampletimes'
-
-repoDir = 'file://' + rootProject.projectDir + '/repo/'
-
-uploadArchives {
-    repositories.mavenDeployer {
-        repository(url: repoDir)
-        pom {
-            artifactId = 'sampletimes-lib'
-        }
-    }
-}
