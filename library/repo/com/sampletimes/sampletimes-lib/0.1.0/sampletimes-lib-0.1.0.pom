@@ -5,5 +5,5 @@
   <groupId>com.sampletimes</groupId>
   <artifactId>sampletimes-lib</artifactId>
   <version>0.1.0</version>
-  <packaging>apk</packaging>
+  <packaging>aar</packaging>
 </project>
