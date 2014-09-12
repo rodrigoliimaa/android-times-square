@@ -1,0 +1,257 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* .idea/
+* .idea/.name
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/encodings.xml
+* .idea/gradle.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/scopes/
+* .idea/scopes/scope_settings.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* build/
+* build/generated/
+* build/generated/source/
+* build/generated/source/buildConfig/
+* build/generated/source/buildConfig/debug/
+* build/generated/source/buildConfig/debug/com/
+* build/generated/source/buildConfig/debug/com/squareup/
+* build/generated/source/buildConfig/debug/com/squareup/timessquare/
+* build/generated/source/buildConfig/debug/com/squareup/timessquare/BuildConfig.java
+* build/generated/source/buildConfig/release/
+* build/generated/source/buildConfig/release/com/
+* build/generated/source/buildConfig/release/com/squareup/
+* build/generated/source/buildConfig/release/com/squareup/timessquare/
+* build/generated/source/buildConfig/release/com/squareup/timessquare/BuildConfig.java
+* build/generated/source/buildConfig/test/
+* build/generated/source/buildConfig/test/debug/
+* build/generated/source/buildConfig/test/debug/com/
+* build/generated/source/buildConfig/test/debug/com/squareup/
+* build/generated/source/buildConfig/test/debug/com/squareup/timessquare/
+* build/generated/source/buildConfig/test/debug/com/squareup/timessquare/test/
+* build/generated/source/buildConfig/test/debug/com/squareup/timessquare/test/BuildConfig.java
+* build/generated/source/r/
+* build/generated/source/r/debug/
+* build/generated/source/r/debug/com/
+* build/generated/source/r/debug/com/squareup/
+* build/generated/source/r/debug/com/squareup/timessquare/
+* build/generated/source/r/debug/com/squareup/timessquare/R.java
+* build/generated/source/r/release/
+* build/generated/source/r/release/com/
+* build/generated/source/r/release/com/squareup/
+* build/generated/source/r/release/com/squareup/timessquare/
+* build/generated/source/r/release/com/squareup/timessquare/R.java
+* build/generated/source/r/test/
+* build/generated/source/r/test/debug/
+* build/generated/source/r/test/debug/com/
+* build/generated/source/r/test/debug/com/squareup/
+* build/generated/source/r/test/debug/com/squareup/timessquare/
+* build/generated/source/r/test/debug/com/squareup/timessquare/R.java
+* build/generated/source/r/test/debug/com/squareup/timessquare/test/
+* build/generated/source/r/test/debug/com/squareup/timessquare/test/R.java
+* build/intermediates/
+* build/intermediates/bundles/
+* build/intermediates/bundles/debug/
+* build/intermediates/bundles/debug/AndroidManifest.xml
+* build/intermediates/bundles/debug/R.txt
+* build/intermediates/bundles/debug/classes.jar
+* build/intermediates/bundles/debug/res/
+* build/intermediates/bundles/debug/res/color/
+* build/intermediates/bundles/debug/res/color/calendar_text_selector.xml
+* build/intermediates/bundles/debug/res/drawable/
+* build/intermediates/bundles/debug/res/drawable/calendar_bg_selector.xml
+* build/intermediates/bundles/debug/res/drawable/circle_empty.xml
+* build/intermediates/bundles/debug/res/layout/
+* build/intermediates/bundles/debug/res/layout/month.xml
+* build/intermediates/bundles/debug/res/layout/week.xml
+* build/intermediates/bundles/debug/res/values/
+* build/intermediates/bundles/debug/res/values/values.xml
+* build/intermediates/bundles/release/
+* build/intermediates/bundles/release/AndroidManifest.xml
+* build/intermediates/bundles/release/R.txt
+* build/intermediates/bundles/release/classes.jar
+* build/intermediates/bundles/release/res/
+* build/intermediates/bundles/release/res/color/
+* build/intermediates/bundles/release/res/color/calendar_text_selector.xml
+* build/intermediates/bundles/release/res/drawable/
+* build/intermediates/bundles/release/res/drawable/calendar_bg_selector.xml
+* build/intermediates/bundles/release/res/drawable/circle_empty.xml
+* build/intermediates/bundles/release/res/layout/
+* build/intermediates/bundles/release/res/layout/month.xml
+* build/intermediates/bundles/release/res/layout/week.xml
+* build/intermediates/bundles/release/res/values/
+* build/intermediates/bundles/release/res/values/values.xml
+* build/intermediates/classes/
+* build/intermediates/classes/debug/
+* build/intermediates/classes/debug/com/
+* build/intermediates/classes/debug/com/squareup/
+* build/intermediates/classes/debug/com/squareup/timessquare/
+* build/intermediates/classes/debug/com/squareup/timessquare/BuildConfig.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarCellView.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarGridView.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$1.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$2.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$CellClickedListener.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$DateSelectableFilter.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$DefaultOnInvalidDateSelectedListener.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$FluentInitializer.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$MonthAdapter.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$MonthCellWithMonthIndex.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$OnDateSelectedListener.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$OnInvalidDateSelectedListener.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView$SelectionMode.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarPickerView.class
+* build/intermediates/classes/debug/com/squareup/timessquare/CalendarRowView.class
+* build/intermediates/classes/debug/com/squareup/timessquare/Logr.class
+* build/intermediates/classes/debug/com/squareup/timessquare/MonthCellDescriptor$RangeState.class
+* build/intermediates/classes/debug/com/squareup/timessquare/MonthCellDescriptor.class
+* build/intermediates/classes/debug/com/squareup/timessquare/MonthDescriptor.class
+* build/intermediates/classes/debug/com/squareup/timessquare/MonthView$Listener.class
+* build/intermediates/classes/debug/com/squareup/timessquare/MonthView.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$attr.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$color.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$dimen.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$drawable.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$id.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$layout.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$string.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$style.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R$styleable.class
+* build/intermediates/classes/debug/com/squareup/timessquare/R.class
+* build/intermediates/classes/release/
+* build/intermediates/classes/release/com/
+* build/intermediates/classes/release/com/squareup/
+* build/intermediates/classes/release/com/squareup/timessquare/
+* build/intermediates/classes/release/com/squareup/timessquare/BuildConfig.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarCellView.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarGridView.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$1.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$2.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$CellClickedListener.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$DateSelectableFilter.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$DefaultOnInvalidDateSelectedListener.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$FluentInitializer.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$MonthAdapter.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$MonthCellWithMonthIndex.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$OnDateSelectedListener.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$OnInvalidDateSelectedListener.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView$SelectionMode.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarPickerView.class
+* build/intermediates/classes/release/com/squareup/timessquare/CalendarRowView.class
+* build/intermediates/classes/release/com/squareup/timessquare/Logr.class
+* build/intermediates/classes/release/com/squareup/timessquare/MonthCellDescriptor$RangeState.class
+* build/intermediates/classes/release/com/squareup/timessquare/MonthCellDescriptor.class
+* build/intermediates/classes/release/com/squareup/timessquare/MonthDescriptor.class
+* build/intermediates/classes/release/com/squareup/timessquare/MonthView$Listener.class
+* build/intermediates/classes/release/com/squareup/timessquare/MonthView.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$attr.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$color.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$dimen.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$drawable.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$id.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$layout.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$string.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$style.class
+* build/intermediates/classes/release/com/squareup/timessquare/R$styleable.class
+* build/intermediates/classes/release/com/squareup/timessquare/R.class
+* build/intermediates/incremental/
+* build/intermediates/incremental/aidl/
+* build/intermediates/incremental/aidl/debug/
+* build/intermediates/incremental/aidl/debug/dependency.store
+* build/intermediates/incremental/aidl/release/
+* build/intermediates/incremental/aidl/release/dependency.store
+* build/intermediates/incremental/aidl/test/
+* build/intermediates/incremental/aidl/test/debug/
+* build/intermediates/incremental/aidl/test/debug/dependency.store
+* build/intermediates/incremental/mergeAssets/
+* build/intermediates/incremental/mergeAssets/debug/
+* build/intermediates/incremental/mergeAssets/debug/merger.xml
+* build/intermediates/incremental/mergeAssets/release/
+* build/intermediates/incremental/mergeAssets/release/merger.xml
+* build/intermediates/incremental/mergeAssets/test/
+* build/intermediates/incremental/mergeAssets/test/debug/
+* build/intermediates/incremental/mergeAssets/test/debug/merger.xml
+* build/intermediates/incremental/mergeResources/
+* build/intermediates/incremental/mergeResources/test/
+* build/intermediates/incremental/mergeResources/test/debug/
+* build/intermediates/incremental/mergeResources/test/debug/merger.xml
+* build/intermediates/incremental/packageResources/
+* build/intermediates/incremental/packageResources/debug/
+* build/intermediates/incremental/packageResources/debug/merger.xml
+* build/intermediates/incremental/packageResources/release/
+* build/intermediates/incremental/packageResources/release/merger.xml
+* build/intermediates/libs/
+* build/intermediates/libs/SampleTimes_lib-debug-test.ap_
+* build/intermediates/manifests/
+* build/intermediates/manifests/test/
+* build/intermediates/manifests/test/debug/
+* build/intermediates/manifests/test/debug/AndroidManifest.xml
+* build/intermediates/res/
+* build/intermediates/res/test/
+* build/intermediates/res/test/debug/
+* build/intermediates/res/test/debug/color/
+* build/intermediates/res/test/debug/color/calendar_text_selector.xml
+* build/intermediates/res/test/debug/drawable/
+* build/intermediates/res/test/debug/drawable/calendar_bg_selector.xml
+* build/intermediates/res/test/debug/drawable/circle_empty.xml
+* build/intermediates/res/test/debug/layout/
+* build/intermediates/res/test/debug/layout/month.xml
+* build/intermediates/res/test/debug/layout/week.xml
+* build/intermediates/res/test/debug/values/
+* build/intermediates/res/test/debug/values/values.xml
+* build/intermediates/symbols/
+* build/intermediates/symbols/test/
+* build/intermediates/symbols/test/debug/
+* build/intermediates/symbols/test/debug/R.txt
+* build/outputs/
+* build/outputs/aar/
+* build/outputs/aar/SampleTimes_lib.aar
+* build/tmp/
+* build/tmp/packageDebugJar/
+* build/tmp/packageDebugJar/MANIFEST.MF
+* build/tmp/packageReleaseJar/
+* build/tmp/packageReleaseJar/MANIFEST.MF
+* library.iml
+* pom.xml
+* test/
+* test/com/
+* test/com/squareup/
+* test/com/squareup/timessquare/
+* test/com/squareup/timessquare/CalendarPickerViewTest.java
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
