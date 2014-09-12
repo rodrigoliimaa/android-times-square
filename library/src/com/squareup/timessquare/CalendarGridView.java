@@ -2,7 +2,6 @@
 package com.squareup.timessquare;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.util.AttributeSet;
@@ -18,12 +17,6 @@ import static android.view.View.MeasureSpec.makeMeasureSpec;
  * The first row is assumed to be a header and no divider is drawn above it.
  */
 public class CalendarGridView extends ViewGroup {
-  /**
-   * The grid lines don't exactly line up on certain devices (Nexus 7, Nexus 5). Fudging the
-   * co-ordinates by half a point seems to fix this without breaking other devices.
-   * */
-  private static final float FLOAT_FUDGE = 0.5f;
-
   private final Paint dividerPaint = new Paint();
   private int oldWidthMeasureSize;
   private int oldNumRows;
@@ -31,27 +24,6 @@ public class CalendarGridView extends ViewGroup {
   public CalendarGridView(Context context, AttributeSet attrs) {
     super(context, attrs);
     dividerPaint.setColor(getResources().getColor(R.color.calendar_divider));
-  }
-
-  public void setDividerColor(int color) {
-    dividerPaint.setColor(color);
-  }
-
-  public void setDayBackground(int resId) {
-    for (int i = 1; i < getChildCount(); i++) {
-      ((CalendarRowView) getChildAt(i)).setCellBackground(resId);
-    }
-  }
-
-  public void setDayTextColor(int resId) {
-    for (int i = 0; i < getChildCount(); i++) {
-      ColorStateList colors = getResources().getColorStateList(resId);
-      ((CalendarRowView) getChildAt(i)).setCellTextColor(colors);
-    }
-  }
-
-  public void setHeaderTextColor(int color) {
-    ((CalendarRowView) getChildAt(0)).setCellTextColor(color);
   }
 
   @Override public void addView(View child, int index, ViewGroup.LayoutParams params) {
@@ -68,11 +40,11 @@ public class CalendarGridView extends ViewGroup {
     int bottom = getBottom();
     // Left side border.
     final int left = row.getChildAt(0).getLeft() + getLeft();
-    canvas.drawLine(left + FLOAT_FUDGE, top, left + FLOAT_FUDGE, bottom, dividerPaint);
+    canvas.drawLine(left, top, left, bottom, dividerPaint);
 
     // Each cell's right-side border.
     for (int c = 0; c < 7; c++) {
-      float x = left + row.getChildAt(c).getRight() - FLOAT_FUDGE;
+      int x = left + row.getChildAt(c).getRight() - 1;
       canvas.drawLine(x, top, x, bottom, dividerPaint);
     }
   }
@@ -81,7 +53,7 @@ public class CalendarGridView extends ViewGroup {
     final boolean retVal = super.drawChild(canvas, child, drawingTime);
     // Draw a bottom border.
     final int bottom = child.getBottom() - 1;
-    canvas.drawLine(child.getLeft(), bottom, child.getRight() - 2, bottom, dividerPaint);
+    canvas.drawLine(child.getLeft(), bottom, child.getRight(), bottom, dividerPaint);
     return retVal;
   }
 

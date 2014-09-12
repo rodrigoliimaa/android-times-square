@@ -25,7 +25,6 @@ import static com.squareup.timessquare.MonthCellDescriptor.RangeState.MIDDLE;
 import static com.squareup.timessquare.MonthCellDescriptor.RangeState.NONE;
 import static java.util.Calendar.APRIL;
 import static java.util.Calendar.AUGUST;
-import static java.util.Calendar.DATE;
 import static java.util.Calendar.DAY_OF_MONTH;
 import static java.util.Calendar.DAY_OF_WEEK;
 import static java.util.Calendar.DECEMBER;
@@ -334,17 +333,6 @@ public class CalendarPickerViewTest {
     }
   }
 
-  /**
-   * Verify the expectation that the set of dates excludes the max.
-   * In other words, the date interval is [minDate, maxDate)
-   */
-  @Test(expected=IllegalArgumentException.class)
-  public void testSelectedNotInRange_maxDateExcluded() throws Exception {
-    view.init(minDate, maxDate, locale)
-        .inMode(SINGLE)
-        .withSelectedDate(maxDate);
-  }
-
   @Test
   public void testNotCallingInit() throws Exception {
     view = new CalendarPickerView(activity, null);
@@ -441,23 +429,6 @@ public class CalendarPickerViewTest {
   }
 
   @Test
-  public void testWithoutDateSelectedListener() throws Exception {
-    view.init(minDate, maxDate, locale) //
-        .inMode(SINGLE) //
-        .withSelectedDate(today.getTime());
-
-    Calendar jumpToCal = Calendar.getInstance(locale);
-    jumpToCal.setTime(today.getTime());
-    jumpToCal.add(DATE, 1);
-    MonthCellDescriptor cellToClick =
-        new MonthCellDescriptor(jumpToCal.getTime(), true, true, true, true, true, 0,
-            MonthCellDescriptor.RangeState.NONE);
-    view.listener.handleClick(cellToClick);
-
-    assertThat(view.selectedCals.get(0).get(DATE)).isEqualTo(jumpToCal.get(DATE));
-  }
-
-  @Test
   public void testRangeSelectionWithNoInitialSelection() throws Exception {
     view.init(minDate, maxDate, locale)
         .inMode(RANGE);
@@ -473,30 +444,6 @@ public class CalendarPickerViewTest {
     assertRangeSelected();
 
     assertRangeSelectionBehavior();
-  }
-
-  @Test
-  public void testInitWithoutHighlightingCells() {
-    view.init(minDate, maxDate, locale)
-        .inMode(SINGLE);
-
-    assertThat(view.highlightedCals).hasSize(0);
-    assertThat(view.highlightedCells).hasSize(0);
-  }
-
-  @Test
-  public void testHighlightingCells() {
-    final Calendar highlightedCal = buildCal(2012, NOVEMBER, 20);
-
-    view.init(minDate, maxDate, locale)
-        .inMode(SINGLE)
-        .withHighlightedDate(highlightedCal.getTime());
-
-    assertThat(view.highlightedCals).hasSize(1);
-    assertThat(view.highlightedCells).hasSize(1);
-
-    List<List<MonthCellDescriptor>> cells = getCells(NOVEMBER, 2012);
-    assertThat(cells.get(3).get(2).isHighlighted()).isTrue();
   }
 
   private void assertRangeSelectionBehavior() {
@@ -615,25 +562,6 @@ public class CalendarPickerViewTest {
     assertCell(cells, 0, 0, 26, false, false, false, false, NONE);
     assertCell(cells, 1, 0, 2, true, false, false, true, NONE);
     assertCell(cells, 5, 0, 30, true, false, false, true, NONE);
-  }
-
-  @Test
-  public void testSetShortWeekdays() throws Exception {
-    String[] capitalDays = { "", "S", "M", "T", "W", "T", "F", "S" };
-
-    Calendar cal = Calendar.getInstance(Locale.getDefault());
-    assertThat(cal.getFirstDayOfWeek()).isEqualTo(Calendar.MONDAY);
-
-    view.init(minDate, maxDate, Locale.getDefault())
-        .setShortWeekdays(capitalDays);
-    MonthView monthView = (MonthView) view.getAdapter().getView(1, null, null);
-    CalendarRowView header = (CalendarRowView) monthView.grid.getChildAt(0);
-    TextView firstDay = (TextView) header.getChildAt(0);
-    assertThat(firstDay).hasTextString("M"); // Monday!
-    TextView secondDay = (TextView) header.getChildAt(1);
-    assertThat(secondDay).hasTextString("T"); // Tuesday!
-    TextView thirdDay = (TextView) header.getChildAt(2);
-    assertThat(thirdDay).hasTextString("W"); // Wednesday!
   }
 
   private static void assertCell(List<List<MonthCellDescriptor>> cells, int row, int col,
